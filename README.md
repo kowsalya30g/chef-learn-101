@@ -1,5 +1,5 @@
 # chef-learn-101
-Clone this repo inside the chef-repo-> cookbooks
+Clone this repo inside the chef-repo-> cookbooks -> git clone git-url
 
 
 TODO: Enter the cookbook description here.
