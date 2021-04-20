@@ -1,4 +1,6 @@
 # chef-learn-101
+Clone this repo inside the chef-repo-> cookbooks
+
 
 TODO: Enter the cookbook description here.
 1)  knife cookbook upload chef-learn-101
