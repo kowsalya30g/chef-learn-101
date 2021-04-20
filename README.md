@@ -47,7 +47,9 @@ TODO: Enter the cookbook description here.
   
 5)  knife environment from file chef-lerarn-dev.json
 6)  knife environment from file chef-learn-prod.json
-7)  sudo chef-client  # on both ec2 instance 
+7)  in chef server change enviroment to chef-development from dev env.
+8)  in chef server change enviroment to chef-producation from prod env.
+9)  sudo chef-client  # on both ec2 instance 
 
 
 
