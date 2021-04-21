@@ -3,8 +3,16 @@ If u want can change the version as 0.1.1 in metadata.rb file so that version wi
 
 Clone this repo inside the chef-repo-> cookbooks -> git clone git-url
 
+Then go inside files 
+
+chef-repo -> cookbooks -> chef-learn-101 -> files - > clone here the static web files by pasting this url 
+````
+git clone https://github.com/kowsalya30g/static-web.git
+
+````
 
 TODO: Enter the cookbook description here.
+
 ````
   knife cookbook upload chef-learn-101
 ````
