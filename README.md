@@ -1,19 +1,31 @@
 # chef-learn-101
+If u want can change the version as 0.1.1 in metadata.rb file so that version will be displayed in chef server and should mention that in environment files also.... 
+
 Clone this repo inside the chef-repo-> cookbooks -> git clone git-url
 
 
 TODO: Enter the cookbook description here.
-1)  knife cookbook upload chef-learn-101
-2)  knife node run_list add dev recipe[chef-learn-101::default]  # change dev -> to u r env on chef dev server.
-3)  knife node run_list add prod recipe[chef-learn-101::default] # change pord -> to u r env on chef  prod server.
-# Adding Enviormnet 
-  chef-repo-> environments -> create  chef-lerarn-dev.json
-      
-      {
+````
+  knife cookbook upload chef-learn-101
+````
+````
+  knife node run_list add dev recipe[chef-learn-101::default]   
+````  
+ #### change dev -> to ur env on chef dev server.
+````
+  knife node run_list add production recipe[chef-learn-101::default]   
+````
+ #### change pord -> to ur env on chef  prod server.
+
+# Adding Enviorment
+
+  chef-repo-> environments -> create  chef-learn-dev.json
+````
+{
     "name": "chef-development",
     "description": "",
     "cookbook_versions": {
-            "chef-learn-101": "= 0.1.0"
+            "chef-learn-101": "= 0.1.1"
     },
     "json_class": "Chef::Environment",
     "chef_type": "environment",
@@ -21,17 +33,23 @@ TODO: Enter the cookbook description here.
     },
     "override_attributes": {
             "chef-learn-101": {
-                 "env": "development"
+                 "env": "development",
+                 "name": "Kowsalya"
             }
     }
- }
- chef-repo-> environments -> create  chef-learn-prod.json
+}
+
+````    
+#### for prod dept 
+
+ chef-repo-> environments -> create  chef-learn-prod.json 
  
-     {
-    "name": "chef-producation",
+````
+{
+    "name": "chef-production",
     "description": "",
     "cookbook_versions": {
-            "chef-learn-101": "= 0.1.0"
+            "chef-learn-101": "= 0.1.1"
     },
     "json_class": "Chef::Environment",
     "chef_type": "environment",
@@ -39,17 +57,30 @@ TODO: Enter the cookbook description here.
     },
     "override_attributes": {
             "chef-learn-101": {
-                 "env": "Production"
+                 "env": "Production",
+                 "name": "Vimalesh"
             }
     }
- }
- 
-  
-5)  knife environment from file chef-lerarn-dev.json
-6)  knife environment from file chef-learn-prod.json
-7)  in chef server change enviroment to chef-development from dev env.
-8)  in chef server change enviroment to chef-producation from prod env.
-9)  sudo chef-client  # on both ec2 instance 
+    }
+````
+Then upload the environment files 
+````
+knife environment from file chef-learn-dev.json
+````
+for other node production  
+````
+ knife environment from file chef-learn-prod.json
+````
+
+In chef server(chef portal) change enviroment to chef-development from dev env.
+In chef server change enviroment to chef-production from prod env.
+
+Then run the dev and prod instances and run the below commands 
+````
+sudo chef-client 
+````
+
+Click the ip address of dev and prod instances and see the output
 
 
 
